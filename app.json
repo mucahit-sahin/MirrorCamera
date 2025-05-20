@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "MirrorCamera",
+    "slug": "MirrorCamera",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/flip-horizontal-svgrepo-com.svg",
+    "description": "A camera app that allows you to see yourself as others see you with mirroring capabilities",
+    "splash": {
+      "image": "./assets/flip-horizontal-svgrepo-com.svg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "scheme": "mirrorcamera",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "icon": "./assets/flip-horizontal-svgrepo-com.svg"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/flip-horizontal-svgrepo-com.svg",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "hardwareAccelerated": true,
+      "permissions": ["CAMERA", "RECORD_AUDIO", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "MEDIA_LIBRARY"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/flip-horizontal-svgrepo-com.svg"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow access to your camera for the Mirror Camera app.",
+          "microphonePermission": "Allow access to your microphone for the Mirror Camera app.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow access to your gallery to save photos taken by the app.",
+          "savePhotosPermission": "Allow access to your gallery to save photos taken by the app.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
