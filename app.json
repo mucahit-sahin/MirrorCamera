@@ -4,10 +4,10 @@
     "slug": "MirrorCamera",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/flip-horizontal-svgrepo-com.svg",
+    "icon": "./assets/flip-horizontal-svgrepo-com.png",
     "description": "A camera app that allows you to see yourself as others see you with mirroring capabilities",
     "splash": {
-      "image": "./assets/flip-horizontal-svgrepo-com.svg",
+      "image": "./assets/flip-horizontal-svgrepo-com.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,21 +18,33 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "icon": "./assets/flip-horizontal-svgrepo-com.svg"
+      "icon": "./assets/flip-horizontal-svgrepo-com.png"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/flip-horizontal-svgrepo-com.svg",
+        "foregroundImage": "./assets/flip-horizontal-svgrepo-com.png",
         "backgroundColor": "#ffffff"
       },
+      "package": "com.mirrorcamera.app",
       "edgeToEdgeEnabled": true,
       "hardwareAccelerated": true,
-      "permissions": ["CAMERA", "RECORD_AUDIO", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "MEDIA_LIBRARY"]
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "MEDIA_LIBRARY",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION"
+      ]
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/flip-horizontal-svgrepo-com.svg"
+      "favicon": "./assets/flip-horizontal-svgrepo-com.png"
     },
     "plugins": [
       "expo-router",
@@ -55,6 +67,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "762f96ab-f00f-4e7e-86ae-9a6954156bb7"
+      }
     }
   }
 }
